@@ -5,9 +5,8 @@
 ![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1b1cbbbe-8d5d-469c-a3b2-33111a7065ee)
 
 #end matrix
-endpos = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 0]]
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf)
+
 
 #Hamming value calculation
 #If the elements in the same index of the matrices are different, we increase the hamming value by 1
