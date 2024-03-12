@@ -7,7 +7,8 @@
 
 
 #end matrix
-![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf)
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf">
+
 
 
 #Hamming value calculation
