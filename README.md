@@ -5,48 +5,28 @@
 ![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1b1cbbbe-8d5d-469c-a3b2-33111a7065ee)
 
 #end matrix
-[image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf)
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf)
 
 
 #Hamming value calculation
-#If the elements in the same index of the matrices are different, we increase the hamming value by 1
-def hamming(matris):
-    hamming_Value = 0
-    for x in range(3):
-        for y in range(3):
-            if matris[x][y] != endpos[x][y]:
-                hamming_Value += 1
-    return hamming_Value
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/a2730497-02af-423e-8d8d-bb179ed10980)
+
 
 #Mannathen value calculation.
 #distance of the indexes of the current matrix to where they should be in the ending matrix.
 #Subtraction must be done with absolute value.
 #Because: If the element that should be at position [2][2] is at position [0][0], the distance gives a negative result.
-def mannathen(matris):
-    mannathen_value = 0
-    for x in range(3):
-        for y in range(3):
-            if matris[x][y] != 0:
-                for k in range(3):
-                    for l in range(3):
-                        if matris[x][y] == endpos[k][l]:
-                            value = abs(l - y) + abs(k - x)
-                            mannathen_value += value
-    return mannathen_value
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/6edffcf5-a965-44f8-b5f4-381cfd09edd4)
+
 
 
 #Heuristic value is the sum of mannathen and hamming values.
 #heuristic value intuitively represents our distance from the outcome.
-def heuristic(matris):
-    return hamming(matris) + mannathen(matris)
-
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1cf17203-a8c5-4769-8a31-202f036f6ada)
 
 #Returns the row and column containing element 0 in the matrix
-def find_blanks(matris):
-    for x in range(3):
-        for y in range(3):
-            if (matris[x][y] == 0):
-                return x, y
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/d98ce870-4211-40ab-9d81-4a3e3603e6af)
+
 
 #Adds to the list the places where the number 0 can move within the matrix
 #clears the list before each step
