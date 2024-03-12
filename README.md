@@ -1,5 +1,7 @@
 # 8-Puzzle_A-_Python_Solution
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=metinagan&label=Profile%20views&color=0e75b6&style=flat" alt="metinagan" /> </p>
+
 
 #initial matrix
 
