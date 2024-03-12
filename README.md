@@ -79,36 +79,15 @@
 
 
 #A-Star Algorithm
-def astar(matris):
-    poslist.clear()         # clears the list on each iteration
-    neighbors_list.clear()  # clears the list on each iteration
-    list_hehur=[]            
-    list_hehur.clear()
-    if matris==endpos:      #if the current matrix is ​​equal to the ending matrix
-        print("Bitti")
-    else:
-        node = [row[:] for row in matris]
-        createneighbors(node)        #creates neighbors matrices of existing matrices
-        for x in range(len(poslist)):      #for each neighbors matrix
-            if poslist[x] in main_list:    
-                pass
-            else:
-                heurvalue=heuristic(poslist[x])   # calculate heuristic value for every neighbors
-                list_hehur.append(heurvalue)      # add calculated value to list
-        minheur=min(list_hehur)                   # find minimum element in list
-        minheurindex=list_hehur.index(minheur)    # find index with minimum element
-        print("Adim: ",len(main_list))            # print step count
-        main_list.append(poslist[minheurindex])   # add matrix with minimum heuristic value to main list
-        print("heuristic=",minheur)               # print heuristic value
-        printmatris(main_list[-1])                # print last element of main list
-        astar(main_list[-1])                      # return function with last element of main list
+
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/14fb72ae-9f5a-4606-aea8-9122242acc3d">
+
 
 
 #Clear main list and add starting matrix to the end of the list
 #Finally send the last element of the main list to the function
-main_list.clear()
-main_list.append(startpos)
-astar(main_list[-1])
+
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1dce3597-57a4-4164-9d54-efbe9bd4b863">
 
 
 
