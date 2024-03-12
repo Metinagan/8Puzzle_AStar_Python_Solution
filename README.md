@@ -5,6 +5,8 @@
 startpos = [[0, 2, 3],
             [1, 4, 5],
             [7, 8, 6]]
+![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1b1cbbbe-8d5d-469c-a3b2-33111a7065ee)
+
 #end matrix
 endpos = [[1, 2, 3],
           [4, 5, 6],
