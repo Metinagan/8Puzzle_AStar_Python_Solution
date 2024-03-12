@@ -22,8 +22,11 @@
 
 
 #Mannathen value calculation.
+
 #distance of the indexes of the current matrix to where they should be in the ending matrix.
+
 #Subtraction must be done with absolute value.
+
 #Because: If the element that should be at position [2][2] is at position [0][0], the distance gives a negative result.
 
 <img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/6edffcf5-a965-44f8-b5f4-381cfd09edd4">
