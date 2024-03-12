@@ -35,37 +35,23 @@
 
 
 #Returns the row and column containing element 0 in the matrix
-![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/d98ce870-4211-40ab-9d81-4a3e3603e6af)
+
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/d98ce870-4211-40ab-9d81-4a3e3603e6af">
+
 
 
 #Adds to the list the places where the number 0 can move within the matrix
 #clears the list before each step
-def neighbors(matris):
-    neighbors_list.clear()
-    row, col = find_blanks(matris)
-    if row > 0:
-        neighbors_list.append([row - 1, col])
-    if row < 2:
-        neighbors_list.append([row + 1, col])
-    if col > 0:
-        neighbors_list.append([row, col - 1])
-    if col < 2:
-        neighbors_list.append([row, col + 1])
+
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/8d72cb11-4deb-45f8-9c28-4cde1c0a5a70">
 
 #The function requires a matrix, row and column as values.
 #If newly created matrices already exist, we do not add them to the list.
 #This way we don't go through the same step again.
 #and the function does not stay in an infinite loop
-def change_blanks(matris, row, col):
-    zerorow, zerocol = find_blanks(matris)
-    node = [row[:] for row in matris]
-    new = node[row][col]
-    node[zerorow][zerocol] = new
-    node[row][col] = 0
-    if node in main_list:
-        pass
-    else:
-        poslist.append(node)
+
+<img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/562c5044-88aa-429b-875a-70c2234840a9">
+
 
 #We print the matrix.
 #We give 2 seconds of sleep time. Because the matrixs flow so fast.
