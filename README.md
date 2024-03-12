@@ -1,17 +1,17 @@
-# 8-Puzzle_A-_Python_Solution
+#8-Puzzle_A-_Python_Solution
 
 
-# initial matrix
+#initial matrix
 startpos = [[0, 2, 3],
             [1, 4, 5],
             [7, 8, 6]]
-# end matrix
+#end matrix
 endpos = [[1, 2, 3],
           [4, 5, 6],
           [7, 8, 0]]
 
-# Hamming value calculation
-# If the elements in the same index of the matrices are different, we increase the hamming value by 1
+#Hamming value calculation
+#If the elements in the same index of the matrices are different, we increase the hamming value by 1
 def hamming(matris):
     hamming_Value = 0
     for x in range(3):
@@ -20,10 +20,10 @@ def hamming(matris):
                 hamming_Value += 1
     return hamming_Value
 
-# Mannathen value calculation.
-# distance of the indexes of the current matrix to where they should be in the ending matrix.
-# Subtraction must be done with absolute value.
-# Because: If the element that should be at position [2][2] is at position [0][0], the distance gives a negative result.
+#Mannathen value calculation.
+#distance of the indexes of the current matrix to where they should be in the ending matrix.
+#Subtraction must be done with absolute value.
+#Because: If the element that should be at position [2][2] is at position [0][0], the distance gives a negative result.
 def mannathen(matris):
     mannathen_value = 0
     for x in range(3):
@@ -37,21 +37,21 @@ def mannathen(matris):
     return mannathen_value
 
 
-# Heuristic value is the sum of mannathen and hamming values.
-# heuristic value intuitively represents our distance from the outcome.
+#Heuristic value is the sum of mannathen and hamming values.
+#heuristic value intuitively represents our distance from the outcome.
 def heuristic(matris):
     return hamming(matris) + mannathen(matris)
 
 
-# Returns the row and column containing element 0 in the matrix
+#Returns the row and column containing element 0 in the matrix
 def find_blanks(matris):
     for x in range(3):
         for y in range(3):
             if (matris[x][y] == 0):
                 return x, y
 
-# Adds to the list the places where the number 0 can move within the matrix
-# clears the list before each step
+#Adds to the list the places where the number 0 can move within the matrix
+#clears the list before each step
 def neighbors(matris):
     neighbors_list.clear()
     row, col = find_blanks(matris)
@@ -64,10 +64,10 @@ def neighbors(matris):
     if col < 2:
         neighbors_list.append([row, col + 1])
 
-# The function requires a matrix, row and column as values.
-# If newly created matrices already exist, we do not add them to the list.
-# This way we don't go through the same step again.
-# and the function does not stay in an infinite loop
+#The function requires a matrix, row and column as values.
+#If newly created matrices already exist, we do not add them to the list.
+#This way we don't go through the same step again.
+#and the function does not stay in an infinite loop
 def change_blanks(matris, row, col):
     zerorow, zerocol = find_blanks(matris)
     node = [row[:] for row in matris]
@@ -79,8 +79,8 @@ def change_blanks(matris, row, col):
     else:
         poslist.append(node)
 
-# We print the matrix.
-# We give 2 seconds of sleep time. Because the matrixs flow so fast.
+#We print the matrix.
+#We give 2 seconds of sleep time. Because the matrixs flow so fast.
 def printmatris(matris):
     for row in matris:
         for eleman in row:
@@ -89,9 +89,9 @@ def printmatris(matris):
     print("____________")
     time.sleep(2)
     
-# Sıfır sayısının gidebileceği yere sıfır sayısını alıyoruz.
-# Adds the new matrices we created to the list.
-# This function creates matrices which will be one of our next steps.
+#Sıfır sayısının gidebileceği yere sıfır sayısını alıyoruz.
+#Adds the new matrices we created to the list.
+#This function creates matrices which will be one of our next steps.
 def createneighbors(matris):
     neighbors_list.clear()
     node = [row[:] for row in matris]
@@ -102,7 +102,7 @@ def createneighbors(matris):
 
 
 
-# A-Star Algorithm
+#A-Star Algorithm
 def astar(matris):
     poslist.clear()         # clears the list on each iteration
     neighbors_list.clear()  # clears the list on each iteration
@@ -128,8 +128,8 @@ def astar(matris):
         astar(main_list[-1])                      # return function with last element of main list
 
 
-# Clear main list and add starting matrix to the end of the list
-# Finally send the last element of the main list to the function
+#Clear main list and add starting matrix to the end of the list
+#Finally send the last element of the main list to the function
 main_list.clear()
 main_list.append(startpos)
 astar(main_list[-1])
