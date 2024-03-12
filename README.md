@@ -4,6 +4,8 @@
 #initial matrix
 
 <img src="https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/1b1cbbbe-8d5d-469c-a3b2-33111a7065ee">
+
+
 #end matrix
 ![image](https://github.com/Metinagan/8Puzzle_AStar_Python_Solution/assets/130462728/147aa8f5-e1dd-4591-a963-08b3d0cda1bf)
 
